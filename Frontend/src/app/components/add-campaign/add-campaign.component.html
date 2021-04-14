@@ -1,0 +1,340 @@
+<!-- ======= Intro Single ======= -->
+<section class="intro-single">
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="title-single-box">
+          <h1 class="title-single">Start A Campaign</h1>
+          <span class="color-text-a"></span>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-4">
+        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a [routerLink]="['/home']">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Add Campaign
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section><!-- End Intro Single-->
+
+
+
+<div class="main-content" id="panel">
+
+  <div class="container-fluid mt--6">
+    <div class="row">
+      <div class="col-xl-4 order-xl-2">
+        <div class="card card-profile">
+          <img src="../../assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder" class="card-img-top">
+          <div class="row justify-content-center">
+            <div class="col-lg-3 order-lg-2">
+              <div class="card-profile-image">
+                <a href="#">
+                  <img src="../assets/img/faces/marc.jpg" class="rounded-circle">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+            <div class="d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-info  mr-4 ">Connect</a>
+              <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+            </div>
+          </div>
+          <div class="card-body pt-0">
+            <div class="row">
+              <div class="col">
+                <div class="card-profile-stats d-flex justify-content-center">
+                  <div>
+                    <span class="heading">22</span>
+                    <span class="description">Campaigns</span>
+                  </div>
+                  <div>
+                    <span class="heading">10</span>
+                    <span class="description">Products</span>
+                  </div>
+                  <div>
+                    <span class="heading">89</span>
+                    <span class="description">Feedbacks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h5 class="h3">
+                Samir<span class="font-weight-light">, 27</span>
+              </h5>
+              <div class="h5 font-weight-300">
+                <i class="ni location_pin mr-2"></i>Bucharest, Romania
+              </div>
+              <div class="h5 mt-4">
+                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+              </div>
+              <div>
+                <i class="ni education_hat mr-2"></i>University of Computer Science
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-8"> <img [src]=campaign.PhotoFilePath class="img-fluid img-thumbnail"></div>
+
+
+          </div>
+          <div class="row justify-content-center">
+            <form class="justify-content-center col-10 ml-2">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFileLang" lang="en"
+                  (change)="uploadPhoto($event)">
+                <label class="custom-file-label" for="customFileLang">Select file</label>
+              </div>
+            </form>
+          </div>
+          
+          <div class="row justify-content-center">
+            <div class="col-8"> <img [src]=campaign.PhotoFilePath2 class="img-fluid img-thumbnail"></div>
+          </div>
+
+          <div class="row justify-content-center mt-2">
+            <form class="justify-content-center col-10 ml-2">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFileLang2" lang="en"
+                  (change)="uploadPhoto2($event)">
+                <label class="custom-file-label" for="customFileLang2">Select file</label>
+              </div>
+            </form>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-8"> <img [src]=campaign.PhotoFilePath3 class="img-fluid img-thumbnail"></div>
+          </div>
+
+          <div class="row justify-content-center mt-2">
+            <form class="justify-content-center col-10 ml-2">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFileLang3" lang="en"
+                  (change)="uploadPhoto3($event)">
+                <label class="custom-file-label" for="customFileLang3">Select file</label>
+              </div>
+            </form>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+      <div class="col-xl-8 order-xl-1">
+        <div class="card">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col-8">
+                <h3 class="mb-0">Campaign Info </h3>
+              </div>
+              <div class="col-4 text-right">
+                <a href="#!" class="btn btn-sm btn-success" (click)="saveCampaign()">Publish</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <form>
+              <h6 class="heading-small text-muted mb-4">Fundamental</h6>
+              <div class="pl-lg-4">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-username">Title</label>
+                      <input [(ngModel)]="campaign.title" name="title" class="form-control"
+                        placeholder="Enter a catchy title...">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-email">Target Amount</label>
+                      <input type="number" [(ngModel)]="campaign.targetammount" name="campaign.targetammount"
+                        class="form-control" placeholder="1000">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-first-name">End Date</label>
+                      <input [(ngModel)]="campaign.targetDate" name="campaign.targetDate" type="date"
+                        class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-last-name">Model</label>
+                      <select class="custom-select d-block w-100" required>
+                        <option value="">Choose...</option>
+                        <option>Reward Based</option>
+                        <option>Donation</option>
+                        <option>Others</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-first-name">Category</label>
+                      <select [(ngModel)]="campaign.category" name="campaign.category"
+                        class="custom-select d-block w-100" required>
+                        <option value="">Choose...</option>
+                        <option>Tech & Innovation </option>
+                        <option>Creative Works </option>
+                        <option>Community Projects</option>
+                        <option>Others</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-last-name">Subcategory</label>
+                      <select class="custom-select d-block w-100"  [(ngModel)]="campaign.subcategory" name="campaign.subcategory" required>
+                        <option value="">Choose...</option>
+                        <option>Audio</option>
+                        <option>Camera Gear</option>
+                        <option>Education</option>
+                        <option>Health & Fitness</option>
+                        <option>Fashion & Wearables</option>
+                        <option>Food & Beverages</option>
+                        <option>Home</option>
+                        <option>Phones & Accessories</option>
+                        <option>Productivity</option>
+                        <option>Transportation</option>
+                        <option>Travel & Outdoors</option>
+                        <option>Dance & Theater</option>
+                        <option>Film</option>
+                        <option>Music</option>
+                        <option>Photography</option>
+                        <option>Video Games</option>
+                        <option>Web Series & TV Shows</option>
+                        <option>Art</option>
+                        <option>Comics</option>
+                        <option>Others</option>
+                        <option>Culture</option>
+                        <option>Environment</option>
+                        <option>Local Businesses</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <hr class="my-4" />
+              <!-- Address -->
+              <h6 class="heading-small text-muted mb-4">Contact information</h6>
+              <div class="pl-lg-4">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-address">Address</label>
+                      <input class="form-control" placeholder="Enter a valid address" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-city">City</label>
+                      <select class="custom-select d-block w-100" required>
+                        <option value="">Choose...</option>
+                        <option>Dhaka</option>
+                        <option>Berlin</option>
+                        <option>New York</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-country">Country</label>
+
+                      <select class="custom-select d-block w-100" required>
+                        <option value="">Choose...</option>
+                        <option>USA</option>
+                        <option>Germany</option>
+                        <option>Bangladesh</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-country">Postal code</label>
+                      <input type="number" id="input-postal-code" class="form-control" placeholder="Postal code">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-4" />
+
+              <!-- Summary -->
+              <h6 class="heading-small text-muted mb-4">Short summary</h6>
+              <div class="pl-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Briefly describe your campaign...</label>
+                  <textarea rows="4" [(ngModel)]="campaign.summary" name="campaign.summary" class="form-control"
+                    placeholder="Keep it short and simple ..."></textarea>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <h6 class="heading-small text-muted mb-4">Description</h6>
+              <div class="pl-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Pitch us about your project...</label>
+                  <textarea rows="4" [(ngModel)]="campaign.description" name="campaign.description" class="form-control"
+                    placeholder="Explain ins and outs of the project ..."></textarea>
+                </div>
+              </div>
+
+
+              <!-- Details -->
+              <h6 class="heading-small text-muted mb-4">What We Need & What You Get</h6>
+              <div class="pl-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Break it down for folks...</label>
+                  <textarea rows="4" [(ngModel)]="campaign.details" name="campaign.details" class="form-control"
+                    placeholder="Explain your needs and why we should give  ..."></textarea>
+                </div>
+              </div>
+
+
+              <!-- Impact -->
+              <h6 class="heading-small text-muted mb-4">The Impact</h6>
+              <div class="pl-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Explain why your project is valuable...</label>
+                  <textarea rows="4" [(ngModel)]="campaign.impact" name="campaign.impact" class="form-control"
+                    placeholder="Explain why you and why this ..."></textarea>
+                </div>
+              </div>
+
+              <!-- Intro -->
+              <h6 class="heading-small text-muted mb-4">The Into</h6>
+              <div class="pl-lg-4">
+                <div class="form-group">
+                  <label class="form-control-label">Write something for the banner...</label>
+                  <textarea rows="4" [(ngModel)]="campaign.intro" name="campaign.intro" class="form-control"
+                    placeholder="Keep it short and precise ..."></textarea>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
