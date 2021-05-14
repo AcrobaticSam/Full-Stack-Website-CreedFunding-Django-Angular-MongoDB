@@ -1,7 +1,7 @@
 # Creedfunding | Django-Angular11 WebProject
  Creedfunding is a crowdfunding website built using Django,Django RestFrameWork,MongoDB and Angular11
  
- # To Eun The Project
+ # To Run The Project
  1. Start the backend server for API use by opening the folder in VS code (Located in Backend Directory)
  2. Run this command , <b> python manage.py runserver 8080 </b>
  3. Then Start the Frontend (Angular Part)  by opening the folder in VS code (Located in Frontend Directory)
