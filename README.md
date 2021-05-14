@@ -7,4 +7,5 @@
  3. Then Start the Frontend (Angular Part)  by opening the folder in VS code (Located in Frontend Directory)
  4. Run this command , <b> ng serve --port 8081 </b>
  5. Then goto <b> localhost:8081 </b> using any browser.
+ 6. Before doing all these make sure you have (node.js, python,django,djangorestframework,djongo,mongod,django corsheader,npm,angular) installed.
 
