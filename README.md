@@ -9,3 +9,7 @@
  5. Then goto <b> localhost:8081 </b> using any browser.
  6. Before doing all these make sure you have (node.js, python,django,djangorestframework,djongo,mongod,django corsheader,npm,angular) installed.
 
+
+# Short Demo(Click to view)
+[![Parakeet short demo](https://img.youtube.com/vi/R2XOjaSVCWo/0.jpg)](https://www.youtube.com/watch?v=R2XOjaSVCWo)
+
